@@ -18,6 +18,7 @@ export class TestComponent implements OnInit {
   @Output() messageEvent=new EventEmitter<string>();
   push(){
     alert("OK");
-    this.messageEvent.emit("this.message");
+    let e = "qwerty";
+    this.messageEvent.emit(e);
   }
 }

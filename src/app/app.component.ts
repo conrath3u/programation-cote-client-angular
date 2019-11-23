@@ -11,8 +11,8 @@ export class AppComponent {
 
   message : string;
 
-  receiveMessage($event: string){
-    this.message = $event;
+  receiveMessage(e: string){
+    this.message = e;
     alert(this.message);
   }
 
