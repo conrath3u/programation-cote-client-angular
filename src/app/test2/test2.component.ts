@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { StestService } from '../stest.service';
 
 @Component({
   selector: 'app-test2',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Test2Component implements OnInit {
 
-  constructor() { }
+  constructor(private stestService: StestService) {
+    console.log(stestService.text1);
+   }
 
   ngOnInit() {
   }

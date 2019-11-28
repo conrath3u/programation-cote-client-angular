@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class StestService {
 
-  text1 = "zaezzetzr";
+  text1 = "text pour test.component.ts";
   constructor() {
     //console.log(this.text1);
   }

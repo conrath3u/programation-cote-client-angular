@@ -28,6 +28,7 @@ export class TestComponent implements OnInit {
   //Affiche la varrible text.1 contenu dans le stest Service
   alertText(){
     alert(this.stestService.text1);
+    this.stestService.text1 = "text 1 modifié blabla";
   }
 
 
