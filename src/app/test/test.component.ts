@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { StestService } from '../stest.service';
 
 @Component({
   selector: 'app-test',
@@ -7,7 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  //importe stest Service pour pouvoir utiliser ses variables
+  constructor(private stestService: StestService){
+    }
 
   ngOnInit() {
   }
@@ -21,4 +24,12 @@ export class TestComponent implements OnInit {
     let e = "qwerty";
     this.messageEvent.emit(e);
   }
+
+  //Affiche la varrible text.1 contenu dans le stest Service
+  alertText(){
+    alert(this.stestService.text1);
+  }
+
+
+
 }
